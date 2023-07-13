@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA DE LOGIN</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    
+    <!-- DIV SERVE PARA SEPARAR(DIVIDIR) EM PARTES CADA CAIXA(DIV) RECEBE ALGO-->
+    <div class="conteiner">
+        <div class="box-login">
+            <h2>LOGIN</h2>
+            <form action="#">
+                <div class="caixa-entrada">
+                    <input type="text" required id="login"> <!--REQUIRED DEIXA DE UMA FORMA QUE NÃO PERMITE CLICAR SE NÃO ESTIVER SELECIONADO-->
+                    <label>USUÁRIO</label>
+                </div>
+
+                <div class="caixa-entrada">
+                    <input type="password" required id="senha"> <!--REQUIRED DEIXA DE UMA FORMA QUE NÃO PERMITE CLICAR SE NÃO ESTIVER SELECIONADO-->
+                    <label>SENHA</label>
+                </div>
+
+                <div class="esqueceu-senha">
+                    <a href="#">Esqueceu Sua Senha?</a>
+                </div>
+
+                <button type="submit" class="btn" onclick="enviar()">LOGIN</button>
+
+                <div class="cadastre-link">
+                    <a href="#">CADASTRE-SE</a>
+                </div>
+            </form>
+        </div>
+
+        <!--CRIANDO UMA VÁRIAVEL-->
+        <!--ISSO DAQUI É O QUE VAI CRIAR OS PAUZINHOS CO CIRCULO GIRATÓRIO-->
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+        <span style="--i:44;"></span>
+        <span style="--i:45;"></span>
+        <span style="--i:46;"></span>
+        <span style="--i:47;"></span>
+        <span style="--i:48;"></span>
+        <span style="--i:49;"></span>
+    </div>
+
+    <script>
+        let login=document.querySelector('#login')
+        let senha=document.querySelector('#senha')
+        let tent=0
+        const usu="Senac"
+        const sen="123A";
+
+        function enviar(){
+            
+            // ESSA PARTE DA TELA BEM VINDO POR ALGUMA RAZÃO 
+            // SÓ RODA NO CHROME, MAS O NEGADO RODA EM QUALQUER UM
+        if (login.value==usu && senha.value==sen){     
+            window.location.href="telaBemvindo.html";
+            alert('Bem vindo!!', login);
+        }else{
+            alert('Senha incorreta')
+            tent++
+        }if (tent==3){         
+            location.href="acessoNegado.html"
+            alert('ACESSO NEGADO!!!');
+        }
+    }
+    </script>
+</body>
+</html>
